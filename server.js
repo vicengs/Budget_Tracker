@@ -1,9 +1,17 @@
+/* ------------------------- */
+/* Project  : Budget Tracker */
+/* File     : seerver.js     */
+/* Modify   : Vicente Garcia */
+/* Date     : 06/18/2022     */
+/* Modified : 06/18/2022     */
+/* ------------------------- */
 const express = require("express");
 const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
 
 const PORT = process.env.PORT || 3001;
+// Add port (27017) to deploy
 const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/:27017/budget-tracker";
 
 const app = express();

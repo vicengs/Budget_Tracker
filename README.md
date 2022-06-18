@@ -11,7 +11,6 @@ Application to allow user add expenses and deposits to their budget with or with
 - JavaScript
 - Node
 - Express
-- Webpack
 - Service Workers
 - Manifest
 - indexedDB
@@ -69,7 +68,7 @@ Made by Vicente Garcia Sepulveda
 
 #### Deployed
 
-- https://git.heroku.com/morning-taiga-40575.git
+- https://morning-taiga-40575.herokuapp.com
   
 #### E-mail
   
@@ -81,6 +80,10 @@ MIT License - A short and simple permissive license with conditions only requiri
 
 ## Screenshots
     
-![Apllication](/assets/images/application.jpg)
+![Application](/assets/images/application.jpg)
+
+![App](/assets/images/app.jpg)
 
 ![Offline](/assets/images/offline.jpg)
+
+![Online](/assets/images/online.jpg)

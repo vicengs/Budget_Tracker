@@ -1,3 +1,10 @@
+/* ------------------------- */
+/* Project  : Budget Tracker */
+/* File     : server.js      */
+/* Modify   : Vicente Garcia */
+/* Date     : 06/16/2022     */
+/* Modified : 06/16/2022     */
+/* ------------------------- */
 const router = require("express").Router();
 const Transaction = require("../models/transaction.js");
 
@@ -31,6 +38,7 @@ router.get("/api/transaction", (req, res) => {
     });
 });
 
+// Add route to delete and be able to test many times
 router.delete("/api/transaction/:id", ({params}, res) => {
   Transaction.findOneAndDelete({ _id: params.id })
   .then(dbTransactionData => {
@@ -44,4 +52,5 @@ router.delete("/api/transaction/:id", ({params}, res) => {
     res.status(404).json(err);
   });
 });
+
 module.exports = router;
