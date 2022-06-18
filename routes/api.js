@@ -31,4 +31,17 @@ router.get("/api/transaction", (req, res) => {
     });
 });
 
+router.delete("/api/transaction/:id", ({params}, res) => {
+  Transaction.findOneAndDelete({ _id: params.id })
+  .then(dbTransactionData => {
+    if (!dbTransactionData) {
+        res.status(404).json({ message: "No transaction found with this id!" });
+        return;
+    }
+    res.json(dbTransactionData);
+  })
+  .catch(err => {
+    res.status(404).json(err);
+  });
+});
 module.exports = router;
